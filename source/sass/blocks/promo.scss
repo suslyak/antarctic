@@ -2,8 +2,12 @@
   width: 100%;
   height: 650px;
   position: relative;
+  display: flex;
+  align-items: center;
   z-index: 0;
   color: $white;
+  font-size: 20px;
+  line-height: 24px;
   background: url("../img/header-bg-desktop@1x.jpg") no-repeat 50% 50%/cover  transparent $blue;
 
   @media (min-resolution: $retina-dppx) {
@@ -11,6 +15,9 @@
   }
 
   @media (max-width: $tablet-width) {
+    height: 638px;
+    font-size: 18px;
+    line-height: 22px;
     background-image: url("../img/header-bg-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
@@ -19,10 +26,58 @@
   }
 
   @media (max-width: $mobile-width) {
+    height: 500px;
+    font-size: 16px;
+    line-height: 22px;
     background-image: url("../img/header-bg-mobile@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/header-bg-mobile@2x.jpg");
     }
   }
+}
+
+.promo__info {
+  margin-left: 198px;
+  margin-bottom: 10px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-left: 15px;
+    margin-bottom: 0;
+  }
+
+}
+
+.promo__title {
+  margin: 0 0 10px;
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 66px;
+
+  br {
+    display: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 36px;
+    line-height: 45px;
+
+    br {
+      display: inline;
+    }
+  }
+}
+
+.promo__slogan {
+  width: 70%;
+  display: block;
 }
