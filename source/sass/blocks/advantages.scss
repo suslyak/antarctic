@@ -11,7 +11,7 @@
 
   @media (max-width: $tablet-width) {
     padding: 100px 45px;
-    background: url("../img/advantages-bg-tablet@1x.jpg") no-repeat 50% 50%/cover  transparent;
+    background-image: ("../img/advantages-bg-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/advantages-bg-tablet@2x.jpg");
@@ -20,7 +20,8 @@
 
   @media (max-width: $mobile-width) {
     padding: 65px 15px;
-    background: url("../img/advantages-bg-mobile@1x.jpg") no-repeat 50% 50%/cover  transparent;
+    background-image: url("../img/advantages-bg-mobile@1x.jpg");
+    background-position: -10px 0;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/advantages-bg-mobile@2x.jpg");
