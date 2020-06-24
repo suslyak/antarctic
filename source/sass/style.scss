@@ -3,6 +3,7 @@
 @import "mixins.scss";
 @import "colors.scss";
 @import "common.scss";
+@import "blocks/visually-hidden.scss";
 @import "blocks/logo.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-menu.scss";
@@ -13,3 +14,5 @@
 @import "blocks/features-list.scss";
 @import "blocks/button.scss";
 @import "blocks/next-tours.scss";
+@import "blocks/booking.scss";
+@import "blocks/form.scss";
