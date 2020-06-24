@@ -38,7 +38,7 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
-    margin: 30px 15px;
+    margin: 20px 15px 25px 15px;
     flex-direction: column;
   }
 }
@@ -57,7 +57,7 @@
   @media (max-width: $mobile-width) {
     width: 100%;
     margin-left: 0;
-    margin-top: 23px;
+    margin-top: 17px;
 
     &:first-child {
       margin-top: 0;
@@ -101,6 +101,10 @@
 
     @media (max-width: $tablet-width) {
       margin-left: 23px;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-left: 20px;
     }
 
     &:first-child {
