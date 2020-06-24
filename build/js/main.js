@@ -1,4 +1,5 @@
 'use strict';
+(function () {
 var body = document.querySelector('body');
 var header = document.querySelector('.page-header');
 var navigation = header.querySelector('.page-header__navigation');
@@ -47,3 +48,4 @@ var hideMobileMenu = function () {
 };
 
 sandwich.addEventListener('click', showMobileMenu);
+})();
