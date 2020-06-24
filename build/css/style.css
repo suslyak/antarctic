@@ -1253,10 +1253,14 @@ body {
           .form input[type="checkbox"] ~ label::before {
             width: 20px;
             height: 20px; } }
+      .form input[type="checkbox"] ~ label:hover {
+        color: green; }
       .form input[type="checkbox"] ~ label:active {
         opacity: 0.5; }
     .form input[type="checkbox"]:focus + label::before {
       border: 2px solid green; }
+    .form input[type="checkbox"]:hover + label::before {
+      background-color: #e3ecf6; }
     .form input[type="checkbox"]:disabled + label {
       opacity: 0.5; }
     .form input[type="checkbox"]:checked ~ label::after {

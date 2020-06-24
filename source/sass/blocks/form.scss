@@ -86,6 +86,10 @@
         }
       }
 
+      &:hover {
+        color: green;
+      }
+
       &:active {
         opacity: 0.5;
       }
@@ -93,6 +97,10 @@
 
     &:focus + label::before {
       border: 2px solid green;
+    }
+
+    &:hover + label::before {
+      background-color: $warm-sky;
     }
 
     &:disabled + label {
