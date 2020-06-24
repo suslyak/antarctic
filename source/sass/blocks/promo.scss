@@ -8,7 +8,7 @@
   color: $white;
   font-size: 20px;
   line-height: 24px;
-  background: url("../img/header-bg-desktop@1x.jpg") no-repeat 50% 50%/cover  transparent $blue;
+  background: url("../img/header-bg-desktop@1x.jpg") no-repeat 50% 50%/cover $blue;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/header-bg-desktop@2x.jpg");
