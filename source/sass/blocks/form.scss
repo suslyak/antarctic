@@ -87,7 +87,7 @@
       }
 
       &:active {
-        opacity: 0.3;
+        opacity: 0.5;
       }
     }
 
@@ -96,7 +96,7 @@
     }
 
     &:disabled + label {
-      opacity: 0.3;
+      opacity: 0.5;
     }
 
     &:checked ~ label::after {
