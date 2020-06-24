@@ -323,6 +323,34 @@
         <button class="button" type="submit">Оставить заявку</button>
       </form>
     </section>
+    <section class="contacts">
+      <div class="contacts__map">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" type="image/webp">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" type="image/webp">
+          <source srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x" type="image/webp">
+          <!-- 1х: 560px; 2x: 1120px -->
+          <img src="img/map-desktop@1x.webp" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" alt="как к нас добраться">
+        </picture>
+      </div>
+      <div class="contacts__info">
+        <p>У вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
+        <div class="contacts__contact">
+          <svg class="contacts__contact-icon" width="18" height="22">
+            <use xlink:href="#icon-pin"></use>
+          </svg>
+          <a>г.&nbsp;Санкт&nbsp;Петербург, ул.&nbsp;Большая&nbsp;Конюшенная, 19/8</a>
+        </div>
+        <div class="contacts__contact">
+          <svg class="contacts__contact-icon" width="18" height="18">
+            <use xlink:href="#icon-phone"></use>
+          </svg>
+          <span>
+            <a class="page-header__phone" href="tel:88002000000">8-800-200-00-00</a>
+          </span>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="page-footer">
     <a class="logo" href="index.html" aria-label="Логотип Круизы в Антарктику">
