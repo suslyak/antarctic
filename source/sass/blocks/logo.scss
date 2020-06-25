@@ -6,6 +6,13 @@
   @media (max-width: $mobile-width) {
     margin-left: 15px;
   }
+
+  &--no-js {
+    svg {
+      stroke: $blue-black;
+      color: $blue-black;
+    }
+  }
 }
 
 .logo__icon {
@@ -19,11 +26,6 @@
     width: 42px;
     height: 22px;
     background-size: 42px 22px;
-
-    &--no-js {
-      stroke: $blue-black;
-      color: $blue-black;
-    }
   }
 
   &--blue {

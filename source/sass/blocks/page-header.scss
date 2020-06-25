@@ -63,34 +63,24 @@
   padding: 0;
   background-color: transparent;
   cursor: pointer;
-
-  &::after {
-    content: "";
-    position: relative;
-    top: -3px;
-    width: 24px;
-    height: 14px;
-    background-image: url("../img/icon-menu.svg");
-    background-repeat: no-repeat;
-  }
+  position: relative;
+  top: -3px;
+  width: 24px;
+  height: 14px;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
 
   &--close {
     background-color: transparent;
-
-    &::after {
-      content: "";
-      width: 15px;
-      height: 15px;
-      background-image: url("../img/icon-close.svg");
-    }
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-close.svg");
   }
 
   @media (max-width: $mobile-width) {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 24px;
-    height: 14px;
     margin-left: auto;
     margin-right: 15px;
 

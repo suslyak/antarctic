@@ -357,6 +357,9 @@ body {
   @media (max-width: 767px) {
     .logo {
       margin-left: 15px; } }
+  .logo--no-js svg {
+    stroke: #011c40;
+    color: #011c40; }
 
 @media (max-width: 1023px) {
   .logo__icon {
@@ -368,10 +371,7 @@ body {
   .logo__icon {
     width: 42px;
     height: 22px;
-    background-size: 42px 22px; }
-    .logo__icon--no-js {
-      stroke: #011c40;
-      color: #011c40; } }
+    background-size: 42px 22px; } }
 
 .logo__icon--blue {
   stroke: #011c40;
@@ -438,22 +438,18 @@ body {
   border: none;
   padding: 0;
   background-color: transparent;
-  cursor: pointer; }
-  .page-header__sandwich::after {
-    content: "";
-    position: relative;
-    top: -3px;
-    width: 24px;
-    height: 14px;
-    background-image: url("../img/icon-menu.svg");
-    background-repeat: no-repeat; }
+  cursor: pointer;
+  position: relative;
+  top: -3px;
+  width: 24px;
+  height: 14px;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat; }
   .page-header__sandwich--close {
-    background-color: transparent; }
-    .page-header__sandwich--close::after {
-      content: "";
-      width: 15px;
-      height: 15px;
-      background-image: url("../img/icon-close.svg"); }
+    background-color: transparent;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-close.svg"); }
   @media (max-width: 767px) {
     .page-header__sandwich {
       display: -webkit-box;
@@ -465,8 +461,6 @@ body {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      width: 24px;
-      height: 14px;
       margin-left: auto;
       margin-right: 15px; }
       .page-header__sandwich--no-js {
