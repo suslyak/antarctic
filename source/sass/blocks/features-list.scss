@@ -28,7 +28,7 @@
     margin-left: 0;
   }
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $mobile-width) {
       &:nth-child(-n+3) {
       margin-top: 0;
     }

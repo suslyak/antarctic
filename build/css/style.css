@@ -876,7 +876,7 @@ body {
   padding: 30px 30px 24px; }
   .features-list__item:nth-child(3n+1) {
     margin-left: 0; }
-  @media (min-width: 1023px) {
+  @media (min-width: 767px) {
     .features-list__item:nth-child(-n+3) {
       margin-top: 0; } }
   @media (max-width: 1023px) {
