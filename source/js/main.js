@@ -1,51 +1,131 @@
 'use strict';
 (function () {
-  var body = document.querySelector('body');
-  var header = document.querySelector('.page-header');
-  var navigation = header.querySelector('.page-header__navigation');
-  var menu = header.querySelector('.main-menu');
-  var sandwich = header.querySelector('.page-header__sandwich');
-  var logo = document.querySelector('.logo');
+  const INVALID_FIELD_BACKGROUND_COLOR = '#ff8282';
+  const VALID_FIELD_BACKGROUND_COLOR = '#f9fbfd';
+  var bodyElement = document.querySelector('body');
+  var headerElement = document.querySelector('.page-header');
+  var navigationElement = headerElement.querySelector('.page-header__navigation');
+  var menuElement = headerElement.querySelector('.main-menu');
+  var sandwichElement = headerElement.querySelector('.page-header__sandwich');
+  var logoElement = headerElement.querySelector('.logo');
+  var formElement = document.querySelector('.form');
+  var phoneInputElement = formElement.querySelector('input[type="tel"]');
+  var formSubmitButton = formElement.querySelector('button[type="submit"]');
+  var customSubmitValidations = [];
 
-  header.classList.remove('page-header--no-js');
-  navigation.classList.remove('page-header__navigation--no-js');
-  menu.classList.remove('main-menu--no-js');
-  sandwich.classList.remove('page-header__sandwich--no-js');
-  logo.classList.remove('logo--no-js');
+  headerElement.classList.remove('page-header--no-js');
+  navigationElement.classList.remove('page-header__navigation--no-js');
+  menuElement.classList.remove('main-menu--no-js');
+  sandwichElement.classList.remove('page-header__sandwich--no-js');
+  logoElement.classList.remove('logo--no-js');
 
   var showMobileMenu = function () {
-    var menuLinksElements = menu.querySelectorAll('a[href]');
+    var menuLinksElements = menuElement.querySelectorAll('a[href]');
 
-    header.classList.add('page-header--white');
-    sandwich.classList.add('page-header__sandwich--close');
-    navigation.classList.add('page-header__navigation--show');
-    logo.classList.add('logo__icon--blue');
-    body.classList.add('modal-open');
+    headerElement.classList.add('page-header--white');
+    sandwichElement.classList.add('page-header__sandwich--close');
+    navigationElement.classList.add('page-header__navigation--show');
+    logoElement.classList.add('logo__icon--blue');
+    bodyElement.classList.add('modal-open');
 
     menuLinksElements.forEach(function (link) {
       link.addEventListener('click', hideMobileMenu);
     });
 
-    sandwich.removeEventListener('click', showMobileMenu);
-    sandwich.addEventListener('click', hideMobileMenu);
+    sandwichElement.removeEventListener('click', showMobileMenu);
+    sandwichElement.addEventListener('click', hideMobileMenu);
   };
 
   var hideMobileMenu = function () {
-    var menuLinksElements = menu.querySelectorAll('a[href]');
+    var menuLinksElements = menuElement.querySelectorAll('a[href]');
 
-    header.classList.remove('page-header--white');
-    sandwich.classList.remove('page-header__sandwich--close');
-    navigation.classList.remove('page-header__navigation--show');
-    body.classList.remove('modal-open');
-    logo.classList.remove('logo__icon--blue');
+    headerElement.classList.remove('page-header--white');
+    sandwichElement.classList.remove('page-header__sandwich--close');
+    navigationElement.classList.remove('page-header__navigation--show');
+    bodyElement.classList.remove('modal-open');
+    logoElement.classList.remove('logo__icon--blue');
 
     menuLinksElements.forEach(function (link) {
       link.removeEventListener('click', hideMobileMenu);
     });
 
-    sandwich.removeEventListener('click', hideMobileMenu);
-    sandwich.addEventListener('click', showMobileMenu);
+    sandwichElement.removeEventListener('click', hideMobileMenu);
+    sandwichElement.addEventListener('click', showMobileMenu);
   };
 
-  sandwich.addEventListener('click', showMobileMenu);
+  var indicateInvalidField = function (element, indicator) {
+    element.style.backgroundColor = (indicator) ? INVALID_FIELD_BACKGROUND_COLOR : VALID_FIELD_BACKGROUND_COLOR;
+  };
+
+  var initRequired = function (form) {
+    var inputs = form.querySelectorAll('input');
+    inputs.forEach(function (input) {
+    if (input.hasAttribute('custom-required')) {
+      input.removeAttribute('required');
+      }
+    });
+  }
+
+  var customRequired = function (element) {
+    var validityMessage = '';
+
+    if (element.hasAttribute('custom-required')) {
+      if (!element.value) {
+        validityMessage += 'Это обязательное поле';
+      }
+    }
+
+    element.setCustomValidity(validityMessage);
+
+    indicateInvalidField(element, validityMessage);
+  }
+
+  var validateForm = function (form, validations) {
+    var validity = 1;
+    var inputs = form.querySelectorAll('input');
+
+    inputs.forEach(function (input) {
+      for (var i = 0; i < validations.length; i++) {
+        validations[i](input);
+      }
+
+      validity *= input.checkValidity();
+
+      input.reportValidity();
+    });
+
+    return validity;
+  }
+
+  var customSubmitForm = function (form) {
+    if (validateForm(form,customSubmitValidations)) {
+      form.submit();
+    }
+  }
+
+  sandwichElement.addEventListener('click', showMobileMenu);
+  customSubmitValidations.push(customRequired);
+
+  phoneInputElement.addEventListener('input', function () {
+    var validityMessage = '';
+    if (phoneInputElement.value) {
+      phoneInputElement.value = phoneInputElement.value.replace(/[^0-9-()]/,'');
+    }
+
+    phoneInputElement.setCustomValidity(validityMessage);
+
+    indicateInvalidField(phoneInputElement, validityMessage);
+  });
+
+  initRequired(formElement);
+
+  formSubmitButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    customSubmitForm(formElement);
+  });
+
+  formElement.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    customSubmitForm(formElement);
+  });
 })();
