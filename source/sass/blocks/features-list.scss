@@ -20,16 +20,24 @@
   display: flex;
   flex-direction: column;
   margin-left: 40px;
+  margin-top: 40px;
   background-color: $white;
   padding: 30px 30px 24px;
 
-  &:first-child {
+  &:nth-child(3n+1) {
     margin-left: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+      &:nth-child(-n+3) {
+      margin-top: 0;
+    }
   }
 
   @media (max-width: $tablet-width) {
     width: calc((100% - 60px) / 3);
     margin-left: 30px;
+    margin-top: 30px;
     padding: 25px 19px 21px 19px;
   }
 
