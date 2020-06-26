@@ -1,5 +1,6 @@
 .main-menu {
   display: flex;
+  flex-wrap: wrap;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -30,9 +31,10 @@
 
 .main-menu__item {
   margin-left: 34px;
+  margin-bottom: 10px;
 
   &:first-child {
-    margin-left: 0;
+    //margin-left: 0;
   }
 
   @media (max-width: $tablet-width) {

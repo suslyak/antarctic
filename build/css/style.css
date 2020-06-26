@@ -408,6 +408,7 @@ body {
     background-color: #f9fbfd; }
 
 .page-header__navigation {
+  max-width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -473,6 +474,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -507,9 +510,8 @@ body {
                 flex-direction: column; } }
 
 .main-menu__item {
-  margin-left: 34px; }
-  .main-menu__item:first-child {
-    margin-left: 0; }
+  margin-left: 34px;
+  margin-bottom: 10px; }
   @media (max-width: 1023px) {
     .main-menu__item {
       margin-left: 24px; } }
