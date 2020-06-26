@@ -21,16 +21,18 @@
 
 .page-footer__navigation {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 70%;
   color: $white;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
 
   @include clear-ul;
-  margin-left: 40px;
+  margin: 5px 0 0 5px;
 
   @media (max-width: $tablet-width) {
-    margin-left: 25px;
+    margin: 3px 0 0 0;
     font-weight: 500;
     font-size: 12px;
     line-height: 15px;
@@ -38,6 +40,7 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
+    max-width: 100%;
     margin: 20px 15px 25px 15px;
     flex-direction: column;
   }
@@ -45,10 +48,7 @@
 
 .page-footer__menuitem {
   margin-left: 34px;
-
-  &:first-child {
-    margin-left: 0;
-  }
+  margin-bottom: 10px;
 
   @media (max-width: $tablet-width) {
     margin-left: 24px;
@@ -58,6 +58,7 @@
     width: 100%;
     margin-left: 0;
     margin-top: 17px;
+    margin-bottom: 0px;
 
     &:first-child {
       margin-top: 0;
@@ -104,7 +105,7 @@
     }
 
     @media (max-width: $tablet-width) {
-      margin-left: 20px;
+      margin-left: 18px;
     }
 
     &:first-child {
