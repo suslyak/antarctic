@@ -37,6 +37,7 @@
   @media (max-width: $mobile-width) {
     display: none;
     width: 100%;
+    max-width: 100%;
     height: calc(100vh - 38px);
     position: absolute;
     top: 38px;
