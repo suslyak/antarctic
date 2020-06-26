@@ -866,7 +866,7 @@ body {
     margin: 0; }
 
 .features-list__item {
-  width: calc((100% - 80px) / 3);
+  width: calc((100% - 81px) / 3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -885,7 +885,7 @@ body {
       margin-top: 0; } }
   @media (max-width: 1023px) {
     .features-list__item {
-      width: calc((100% - 60px) / 3);
+      width: calc((100% - 61px) / 3);
       margin-left: 30px;
       margin-top: 30px;
       padding: 25px 19px 21px 19px; } }
@@ -1008,7 +1008,7 @@ body {
       margin-left: 0; }
     .next-tours__tour:nth-child(-n+4) {
       margin-top: 0; } }
-  @media (max-width: 1130px) {
+  @media (max-width: 1130px) and (min-width: 1023px) {
     .next-tours__tour {
       width: calc((100% - 45px) / 4);
       margin-left: 15px;

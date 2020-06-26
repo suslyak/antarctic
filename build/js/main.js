@@ -1,7 +1,7 @@
 'use strict';
 (function () {
-  const INVALID_FIELD_BACKGROUND_COLOR = '#ff8282';
-  const VALID_FIELD_BACKGROUND_COLOR = '#f9fbfd';
+  var INVALID_FIELD_BACKGROUND_COLOR = '#ff8282';
+  var VALID_FIELD_BACKGROUND_COLOR = '#f9fbfd';
   var bodyElement = document.querySelector('body');
   var headerElement = document.querySelector('.page-header');
   var navigationElement = headerElement.querySelector('.page-header__navigation');
@@ -12,6 +12,42 @@
   var phoneInputElement = formElement.querySelector('input[type="tel"]');
   var formSubmitButton = formElement.querySelector('button[type="submit"]');
   var customSubmitValidations = [];
+
+  if (typeof window !== 'undefined' && window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = function (callback, thisArg) {
+      thisArg = thisArg || window;
+      for (var i = 0; i < this.length; i++) {
+        callback.call(thisArg, this[i], i, this);
+      }
+    };
+  }
+
+  function reportValidity(input) {
+    if (input.checkValidity()) {
+      return true
+    }
+    if (input.reportValidity) {
+      input.reportValidity()
+    } else if (input.form) {
+      const form = input.form
+      const siblings = Array.from(form.elements).filter(
+        e => e !== input && !!e.checkValidity && !e.disabled
+      )
+      for (const sibling of siblings) {
+        sibling.disabled = true
+      }
+      const button = document.createElement("button")
+      form.appendChild(button)
+      button.click()
+      form.removeChild(button)
+      for (const sibling of siblings) {
+        sibling.disabled = false
+      }
+    } else {
+      input.focus()
+    }
+    return false
+  }
 
   headerElement.classList.remove('page-header--no-js');
   navigationElement.classList.remove('page-header__navigation--no-js');
@@ -60,11 +96,11 @@
   var initRequired = function (form) {
     var inputs = form.querySelectorAll('input');
     inputs.forEach(function (input) {
-    if (input.hasAttribute('custom-required')) {
-      input.removeAttribute('required');
+      if (input.hasAttribute('custom-required')) {
+        input.removeAttribute('required');
       }
     });
-  }
+  };
 
   var customRequired = function (element) {
     var validityMessage = '';
@@ -78,7 +114,7 @@
     element.setCustomValidity(validityMessage);
 
     indicateInvalidField(element, validityMessage);
-  }
+  };
 
   var validateForm = function (form, validations) {
     var validity = 1;
@@ -95,13 +131,13 @@
     });
 
     return validity;
-  }
+  };
 
   var customSubmitForm = function (form) {
-    if (validateForm(form,customSubmitValidations)) {
+    if (validateForm(form, customSubmitValidations)) {
       form.submit();
     }
-  }
+  };
 
   sandwichElement.addEventListener('click', showMobileMenu);
   customSubmitValidations.push(customRequired);
@@ -109,7 +145,7 @@
   phoneInputElement.addEventListener('input', function () {
     var validityMessage = '';
     if (phoneInputElement.value) {
-      phoneInputElement.value = phoneInputElement.value.replace(/[^0-9-()]/,'');
+      phoneInputElement.value = phoneInputElement.value.replace(/[^0-9-()]/, '');
     }
 
     phoneInputElement.setCustomValidity(validityMessage);

@@ -62,7 +62,7 @@
     }
   }
 
-  @media (max-width: 1130px) {
+  @media (max-width: 1130px) and (min-width: $tablet-width) {
     width: calc((100% - 45px) / 4);
     margin-left: 15px;
     padding: 35px 15px;
