@@ -364,14 +364,12 @@ body {
 @media (max-width: 1023px) {
   .logo__icon {
     width: 38px;
-    height: 20px;
-    background-size: 38px 20px; } }
+    height: 20px; } }
 
 @media (max-width: 767px) {
   .logo__icon {
     width: 42px;
-    height: 22px;
-    background-size: 42px 22px; } }
+    height: 22px; } }
 
 .logo__icon--blue {
   stroke: #011c40;
@@ -444,7 +442,8 @@ body {
   width: 24px;
   height: 14px;
   background-image: url("../img/icon-menu.svg");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  outline: none; }
   .page-header__sandwich--close {
     background-color: transparent;
     width: 18px;
@@ -1183,7 +1182,8 @@ body {
     margin-bottom: 20px;
     color: #011c40;
     background-color: #f9fbfd;
-    border: none; }
+    border: none;
+    border-radius: 0; }
     .form input:first-child {
       margin-bottom: 0; }
     .form input::-webkit-input-placeholder {
