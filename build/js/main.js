@@ -22,31 +22,16 @@
     };
   }
 
-  function reportValidity(input) {
-    if (input.checkValidity()) {
-      return true
-    }
-    if (input.reportValidity) {
-      input.reportValidity()
-    } else if (input.form) {
-      const form = input.form
-      const siblings = Array.from(form.elements).filter(
-        e => e !== input && !!e.checkValidity && !e.disabled
-      )
-      for (const sibling of siblings) {
-        sibling.disabled = true
-      }
-      const button = document.createElement("button")
-      form.appendChild(button)
-      button.click()
-      form.removeChild(button)
-      for (const sibling of siblings) {
-        sibling.disabled = false
-      }
-    } else {
-      input.focus()
-    }
-    return false
+
+
+  if (!HTMLInputElement.prototype.reportValidity) {
+    HTMLInputElement.prototype.reportValidity = function () {
+        if (this.checkValidity()) {
+            return true;
+        } else {
+            return false;
+        }
+    };
   }
 
   headerElement.classList.remove('page-header--no-js');
