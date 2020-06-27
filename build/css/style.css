@@ -406,7 +406,8 @@ body {
         background-color: #f9fbfd; } }
   .page-header--white {
     position: relative;
-    background-color: #f9fbfd; }
+    background-color: #f9fbfd;
+    padding: 20px 0; }
 
 .page-header__navigation {
   max-width: 80%;
