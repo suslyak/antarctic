@@ -29,7 +29,7 @@
   line-height: 20px;
 
   @include clear-ul;
-  margin: 5px 0 0 5px;
+  margin: 10px 0 0 5px;
 
   @media (max-width: $tablet-width) {
     margin: 3px 0 0 0;
@@ -41,7 +41,7 @@
   @media (max-width: $mobile-width) {
     width: 100%;
     max-width: 100%;
-    margin: 20px 15px 25px 15px;
+    margin: 27px 15px 25px 15px;
     flex-direction: column;
   }
 }

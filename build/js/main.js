@@ -46,7 +46,7 @@
     headerElement.classList.add('page-header--white');
     sandwichElement.classList.add('page-header__sandwich--close');
     navigationElement.classList.add('page-header__navigation--show');
-    logoElement.classList.add('logo__icon--blue');
+    logoElement.classList.add('logo--blue');
     bodyElement.classList.add('modal-open');
 
     menuLinksElements.forEach(function (link) {
@@ -64,7 +64,7 @@
     sandwichElement.classList.remove('page-header__sandwich--close');
     navigationElement.classList.remove('page-header__navigation--show');
     bodyElement.classList.remove('modal-open');
-    logoElement.classList.remove('logo__icon--blue');
+    logoElement.classList.remove('logo--blue');
 
     menuLinksElements.forEach(function (link) {
       link.removeEventListener('click', hideMobileMenu);
