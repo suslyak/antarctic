@@ -12,36 +12,30 @@
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin="anonymous">
-  <script>
-    document.createElement( "picture" );
-  </script>
-  <script src="js/picturefill.min.js" async></script>
-  <script type="text/javascript" src="js/webpjs-0.0.2.min.js"></script>
 </head>
 <body>
-  <div style="display: none">
-    <include src="build/img/sprite_auto.svg"></include>
-  </div>
-  <header class="page-header page-header--no-js">
-    <a class="logo logo--no-js" href="index.html" aria-label="Логотип Круизы в Антарктику">
-    </a>
-    <nav class="page-header__navigation page-header__navigation--no-js">
-      <ul class="main-menu main-menu--no-js">
-        <li class="main-menu__item"><a class="main-menu__link" href="#advantages">Преимущества </a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#travel">Направления</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#tours">Ближайшие круизы</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#contacts">Контакты</a></li>
-      </ul>
-    </nav>
-    <button class="page-header__sandwich page-header__sandwich--no-js" aria-label="открыть или закрыть меню" type="button"></button>
-  </header>
-  <main>
+  <div class="top-wrapper">
+    <header class="page-header page-header--no-js">
+      <a class="logo logo--no-js" href="index.html" aria-label="Логотип Круизы в Антарктику">
+      </a>
+      <nav class="page-header__navigation page-header__navigation--no-js">
+        <ul class="main-menu main-menu--no-js">
+          <li class="main-menu__item"><a class="main-menu__link" href="#advantages">Преимущества </a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#travel">Направления</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#tours">Ближайшие круизы</a></li>
+          <li class="main-menu__item"><a class="main-menu__link" href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="page-header__sandwich page-header__sandwich--no-js" aria-label="открыть или закрыть меню" type="button"></button>
+    </header>
     <section class="promo">
       <div class="promo__info">
         <h1 class="promo__title">Круизы <br>в Антарктику</h1>
         <span class="promo__slogan">Волшебный мир айсбергов и пингвинов</span>
       </div>
     </section>
+  </div>
+  <main>
     <section id="travel" class="travel">
       <div class="travel__info">
         <h2 class="travel__title">Путешествие <br>на край Земли</h2>
@@ -68,7 +62,7 @@
         <li class="features-list__item">
           <figure class="features-list__icon">
             <svg width="27" height="32">
-              <use xlink:href="#icon-liner"></use>
+              <use xlink:href="img/sprite_auto.svg#icon-liner"></use>
             </svg>
           </figure>
           <h3 class="features-list__title">Небольшой круизный&nbsp;лайнер</h3>
@@ -79,7 +73,7 @@
         <li class="features-list__item">
           <figure class="features-list__icon">
             <svg width="38" height="21">
-              <use xlink:href="#icon-include"></use>
+              <use xlink:href="img/sprite_auto.svg#icon-include"></use>
             </svg>
           </figure>
           <h3 class="features-list__title">Система <br>все включено</h3>
@@ -90,7 +84,7 @@
         <li class="features-list__item">
           <figure class="features-list__icon">
             <svg width="42" height="15">
-              <use xlink:href="#icon-zodiac"></use>
+              <use xlink:href="img/sprite_auto.svg#icon-zodiac"></use>
             </svg>
           </figure>
           <h3 class="features-list__title">Экскурсионные <br>туры на Zodiac</h3>
@@ -349,13 +343,13 @@
         <p>У вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
         <div class="contacts__contact">
           <svg class="contacts__contact-icon" width="18" height="22">
-            <use xlink:href="#icon-pin"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-pin"></use>
           </svg>
           <a href="#">г.&nbsp;Санкт&nbsp;Петербург, ул.&nbsp;Большая&nbsp;Конюшенная, 19/8</a>
         </div>
         <div class="contacts__contact">
           <svg class="contacts__contact-icon" width="18" height="18">
-            <use xlink:href="#icon-phone"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
           </svg>
           <span>
             <a class="contacts__phone" href="tel:88002000000">8-800-200-00-00</a>
@@ -377,26 +371,27 @@
       <li>
         <a href="#" aria-label="Круизы в Антарктику на facebook">
           <svg class="page-footer__social-icon" width="11" height="20">
-            <use xlink:href="#icon-fb"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
           </svg>
         </a>
       </li>
       <li>
         <a href="#" aria-label="Круизы в Антарктику на instagram">
           <svg class="page-footer__social-icon" width="20" height="20">
-            <use xlink:href="#icon-instagram"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-instagram"></use>
           </svg>
         </a>
       </li>
       <li>
         <a href="#" aria-label="Круизы в Антарктику на twitter">
           <svg class="page-footer__social-icon" width="20" height="16">
-            <use xlink:href="#icon-twitter"></use>
+            <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
           </svg>
         </a>
       </li>
     </ul>
   </footer>
   <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
 </body>
 </html>

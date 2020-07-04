@@ -1,24 +1,21 @@
 .page-header {
   width: 100%;
-  padding: 35px 103px 0 103px;
-  position: absolute;
+  padding: 35px 103px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   z-index: 1;
 
-
   @include wrapper;
 
   @media (max-width: $tablet-width) {
-    padding: 30px 45px 0 45px;
+    padding: 30px 45px;
   }
 
   @media (max-width: $mobile-width) {
-    padding: 20px 0 0;
+    padding: 20px 0;
 
     &--no-js {
-      position: relative;
       background-color: $white;
     }
   }

@@ -22,8 +22,6 @@
     };
   }
 
-
-
   if (!HTMLInputElement.prototype.reportValidity) {
     HTMLInputElement.prototype.reportValidity = function () {
         if (this.checkValidity()) {

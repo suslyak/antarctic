@@ -354,6 +354,31 @@ body {
   height: 100vh;
   overflow: hidden; }
 
+.top-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("../img/header-bg-desktop@1x.jpg") no-repeat 50% 50%/cover #002f6d; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+    .top-wrapper {
+      background-image: url("../img/header-bg-desktop@2x.jpg"); } }
+  @media (max-width: 1023px) {
+    .top-wrapper {
+      background-image: url("../img/header-bg-tablet@1x.jpg"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .top-wrapper {
+      background-image: url("../img/header-bg-tablet@2x.jpg"); } }
+  @media (max-width: 767px) {
+    .top-wrapper {
+      background-image: url("../img/header-bg-mobile@1x.jpg"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .top-wrapper {
+      background-image: url("../img/header-bg-mobile@2x.jpg"); } }
+
 .logo {
   margin-top: 0;
   margin-bottom: 0;
@@ -382,8 +407,7 @@ body {
 
 .page-header {
   width: 100%;
-  padding: 35px 103px 0 103px;
-  position: absolute;
+  padding: 35px 103px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -397,12 +421,11 @@ body {
   margin-right: auto; }
   @media (max-width: 1023px) {
     .page-header {
-      padding: 30px 45px 0 45px; } }
+      padding: 30px 45px; } }
   @media (max-width: 767px) {
     .page-header {
-      padding: 20px 0 0; }
+      padding: 20px 0; }
       .page-header--no-js {
-        position: relative;
         background-color: #f9fbfd; } }
   .page-header--white {
     position: relative;
@@ -563,7 +586,7 @@ body {
 
 .promo {
   width: 100%;
-  height: 650px;
+  min-height: 540px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -574,40 +597,31 @@ body {
   z-index: 0;
   color: #f9fbfd;
   font-size: 20px;
-  line-height: 24px;
-  background: url("../img/header-bg-desktop@1x.jpg") no-repeat 50% 50%/cover #002f6d; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
-    .promo {
-      background-image: url("../img/header-bg-desktop@2x.jpg"); } }
+  line-height: 24px; }
   @media (max-width: 1023px) {
     .promo {
-      height: 638px;
+      min-height: 551px;
       font-size: 18px;
-      line-height: 22px;
-      background-image: url("../img/header-bg-tablet@1x.jpg"); } }
-  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-    .promo {
-      background-image: url("../img/header-bg-tablet@2x.jpg"); } }
+      line-height: 22px; } }
   @media (max-width: 767px) {
     .promo {
-      height: 500px;
+      min-height: 438px;
       font-size: 16px;
-      line-height: 22px;
-      background-image: url("../img/header-bg-mobile@1x.jpg"); } }
-  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .promo {
-      background-image: url("../img/header-bg-mobile@2x.jpg"); } }
+      line-height: 22px; } }
 
 .promo__info {
   margin-left: 198px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  margin-top: -110px; }
   @media (max-width: 1023px) {
     .promo__info {
-      margin-left: 45px; } }
+      margin-left: 45px;
+      margin-top: -85px; } }
   @media (max-width: 767px) {
     .promo__info {
       margin-left: 15px;
-      margin-bottom: 0; } }
+      margin-bottom: 0;
+      margin-top: -62px; } }
 
 .promo__title {
   margin: 0 0 10px;
@@ -1091,7 +1105,7 @@ body {
 
 .booking {
   width: 100%;
-  height: 555px;
+  min-height: 555px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1113,7 +1127,7 @@ body {
       background-image: url("../img/booking-bg-desktop@2x.jpg"); } }
   @media (max-width: 1023px) {
     .booking {
-      height: 805px;
+      min-height: 805px;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
@@ -1131,7 +1145,7 @@ body {
       background-image: url("../img/booking-bg-tablet@2x.jpg"); } }
   @media (max-width: 767px) {
     .booking {
-      height: 760px;
+      min-height: 760px;
       padding: 57px 15px 65px 15px;
       font-size: 16px;
       line-height: 22px;
