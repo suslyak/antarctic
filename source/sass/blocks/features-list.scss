@@ -29,7 +29,7 @@
   }
 
   @media (min-width: $mobile-width) {
-      &:nth-child(-n+3) {
+    &:nth-child(-n+3) {
       margin-top: 0;
     }
   }

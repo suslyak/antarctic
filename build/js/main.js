@@ -24,11 +24,11 @@
 
   if (!HTMLInputElement.prototype.reportValidity) {
     HTMLInputElement.prototype.reportValidity = function () {
-        if (this.checkValidity()) {
-            return true;
-        } else {
-            return false;
-        }
+      if (this.checkValidity()) {
+        return true;
+      } else {
+        return false;
+      }
     };
   }
 
