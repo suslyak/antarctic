@@ -10,23 +10,23 @@
   @media (max-width: $mobile-width) {
     padding: 65px 25px;
   }
-}
 
-.next-tours__title {
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 21px;
-  margin: 0 auto 60px auto;
+  h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 21px;
+    margin: 0 auto 60px auto;
 
-  @media (max-width: $tablet-width) {
-    font-size: 26px;
-    line-height: 17px;
-  }
+    @media (max-width: $tablet-width) {
+      font-size: 26px;
+      line-height: 17px;
+    }
 
-  @media (max-width: $mobile-width) {
-    margin: 0 auto 40px auto;
-    font-size: 24px;
-    line-height: 18px;
+    @media (max-width: $mobile-width) {
+      margin: 0 auto 40px auto;
+      font-size: 24px;
+      line-height: 18px;
+    }
   }
 }
 
@@ -136,13 +136,13 @@
   top: 0;
   z-index: 2;
   background: linear-gradient(to bottom, $white 0%, $blue-black 50% $blue-black 100%);
-}
 
-.next-tours__picture {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
 }
 
 .next-tours__name {
