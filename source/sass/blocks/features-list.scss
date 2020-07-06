@@ -51,23 +51,23 @@
       margin-top: 0;
     }
   }
-}
 
-.features-list__title {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  margin-bottom: 8px;
-
-  br {
-    display: none;
-  }
-
-  @media (max-width: $tablet-width) {
-    line-height: 25px;
+  h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 8px;
 
     br {
-      display: inline;
+      display: none;
+    }
+
+    @media (max-width: $tablet-width) {
+      line-height: 25px;
+
+      br {
+        display: inline;
+      }
     }
   }
 }
